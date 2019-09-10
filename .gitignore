@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# C binaries
+a.out
+
 # Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
