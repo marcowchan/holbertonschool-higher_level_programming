@@ -4,6 +4,9 @@
 # C binaries
 a.out
 
+# Python cache
+__pycache__
+
 # Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
