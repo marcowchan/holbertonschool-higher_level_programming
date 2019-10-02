@@ -88,9 +88,9 @@ class Square:
 
     def __str__(self):
         """Returns a string similar to the one printed in my_print"""
-        if self.__size == 0:
-            return "\n"
         string = ""
+        if self.__size == 0:
+            return string
         string += "{}".format("\n" * self.__position[1])
         string += "{}".format("\n".join(
             [" " * self.__position[0] + "#" * self.__size] * self.__size))
