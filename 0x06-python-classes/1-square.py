@@ -3,7 +3,7 @@
 
 
 class Square:
-    """Empty definition of 'Square'"""
+    """Definition of 'Square'"""
     def __init__(self, size=0):
         """Instantiates a private instance attribute 'size'"""
         self.__size = size
