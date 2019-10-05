@@ -12,7 +12,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    special = {".", "?", ":"};
+    special = {".", "?", ":"}
     begin = 0
     for end in range(len(text)):
         if text[end] in special:
