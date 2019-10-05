@@ -1,16 +1,3 @@
-Divides all elements of a matrix.
-
-Args:
-    matrix: A list of lists of integers or floats.
-    div: The divisor to divide the elements of the matrix by.
-Raises:
-    TypeError: If the matrix is not a list of lists of integers or floats.
-        or the rows of the matrix are not of the same size
-        or div is not a integer or a float
-    ZeroDivisionError: If div is zero
-Returns:
-    A new matrix of quotients
-
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
