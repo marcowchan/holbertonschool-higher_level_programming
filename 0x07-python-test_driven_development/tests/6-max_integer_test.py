@@ -12,6 +12,14 @@ class TestMaxInteger(unittest.TestCase):
         """tests with list of sorted integer"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
+    def test_rev_sorted_integers(self):
+        """tests with list of reverse sorted integer"""
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+
+    def test_middle_max(self):
+        """tests with list with max in the middle"""
+        self.assertEqual(max_integer([3, 2, 5, 4, 1]), 5)
+
     def test_positive_integers(self):
         """tests with list of positive integers"""
         self.assertEqual(max_integer([1, 15]), 15)
