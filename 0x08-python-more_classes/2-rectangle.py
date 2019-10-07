@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """A rectangle a read-only area and perimeter."""
+    """A rectangle with area and perimeter methods."""
     def __init__(self, width=0, height=0):
         """
         Args:
