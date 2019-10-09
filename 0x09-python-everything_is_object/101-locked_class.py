@@ -3,7 +3,6 @@
 
 
 class LockedClass:
-    """A class with no attributes."""
     def __setattr__(self, name, value):
         """Only allows the dynamic creation of the 'first_name' attribute.
 
