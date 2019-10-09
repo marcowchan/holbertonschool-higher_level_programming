@@ -11,7 +11,7 @@ class LockedClass:
             AttributeError: If name is not 'first_name'.
         """
         if name == "first_name":
-            object.__setattr__(self, 'first_name', name)
+            object.__setattr__(self, 'first_name', value)
         else:
             raise AttributeError(
                 "'LockedClass' object has no attribute '{}'".format(name))
