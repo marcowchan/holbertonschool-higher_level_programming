@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """A class with an empty definition."""
+    """A class with an integer_validation method."""
     def area(self):
         """Unimplemented area method."""
         raise Exception("area() is not implemented")
