@@ -3,12 +3,12 @@
 
 
 def lookup(obj):
-	"""Gets all attributes and methods of an object.
+    """Gets all attributes and methods of an object.
 
-	Args:
-		obj: Object to retrieve attributes and methods of.
+    Args:
+        obj: Object to retrieve attributes and methods of.
 
-	Returns:
-		List of attributes and methods.
-		"""
-	return dir(obj)
+    Returns:
+        List of attributes and methods.
+    """
+    return dir(obj)
