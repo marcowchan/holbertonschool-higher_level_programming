@@ -43,7 +43,7 @@
 >>> print(my_list)
 [5, 3, 6, 3]
 
->>> my_list.append(-33)
+>>> my_list.append(-3)
 
 >>> print(my_list)
 [5, 3, 6, 3, -3]
