@@ -7,6 +7,8 @@ def number_of_lines(filename=""):
 
     Args:
         filename: The name and path of the file to print.
+    Returns:
+        The number of lines.
     """
     lines = 0
     with open(filename, "r", encoding="utf-8") as f:
