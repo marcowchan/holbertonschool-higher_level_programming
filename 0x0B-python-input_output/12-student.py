@@ -12,7 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Gets the dictionary representation of the instance."""
-        my_dict = {};
+        my_dict = {}
         if isinstance(attrs, list):
             for name in attrs:
                 if isinstance(name, str) and name in self.__dict__:
