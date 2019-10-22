@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines an __init__() function."""
+"""Defines a Base class."""
 
 
 class Base:
