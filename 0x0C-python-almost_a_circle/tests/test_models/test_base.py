@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Unittest for the Base class."""
 import unittest
+import json
 from models.base import Base
 
 
@@ -46,3 +47,9 @@ class BaseTest(unittest.TestCase):
         """Checks if the id can be set with a negative integer."""
         my_class = Base(-7)
         self.assertEqual(my_class.id, -7)
+
+    def test_to_json(self):
+        """Checks the json represntation."""
+        input = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
+        expected = json.dumps(input)
+        self.assertEqual(Base.to_json_string(input), expected)
