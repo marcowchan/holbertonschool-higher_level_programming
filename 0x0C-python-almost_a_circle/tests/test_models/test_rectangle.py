@@ -262,3 +262,16 @@ class RectangleTest(unittest.TestCase):
             my_class.display()
         output = f.getvalue()
         self.assertEqual(output, expected)
+
+    def test_update(self):
+        my_class = Rectangle(2, 3, 1, 1, 6)
+        my_class.update(12)
+        self.assertEqual(my_class.id, 12)
+        my_class.update(12, 12)
+        self.assertEqual(my_class.width, 12)
+        my_class.update(12, 12, 13)
+        self.assertEqual(my_class.height, 13)
+        my_class.update(12, 12, 13, 11)
+        self.assertEqual(my_class.x, 11)
+        my_class.update(12, 12, 13, 11, 11)
+        self.assertEqual(my_class.y, 11)
