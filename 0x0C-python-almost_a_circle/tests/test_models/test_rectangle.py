@@ -299,21 +299,21 @@ class RectangleTest(unittest.TestCase):
 
     def test_update_kwargs(self):
         """Checks update with kwargs."""
-        r1 = Rectangle(10, 10, 10, 10)
-        r1.update(height=1)
+        my_class = Rectangle(10, 10, 10, 10)
+        my_class.update(height=1)
         self.assertEqual(my_class.height, 1)
 
-        r1.update(width=1, x=2)
+        my_class.update(width=1, x=2)
         self.assertEqual(my_class.width, 1)
         self.assertEqual(my_class.x, 2)
 
-        r1.update(y=1, width=2, x=3, id=89)
+        my_class.update(y=1, width=2, x=3, id=89)
         self.assertEqual(my_class.y, 1)
         self.assertEqual(my_class.width, 2)
         self.assertEqual(my_class.x, 3)
         self.assertEqual(my_class.id, 89)
 
-        r1.update(x=1, height=2, y=3, width=4)
+        my_class.update(x=1, height=2, y=3, width=4)
         self.assertEqual(my_class.x, 1)
         self.assertEqual(my_class.height, 2)
         self.assertEqual(my_class.y, 3)
