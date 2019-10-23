@@ -318,3 +318,9 @@ class RectangleTest(unittest.TestCase):
         self.assertEqual(my_class.height, 2)
         self.assertEqual(my_class.y, 3)
         self.assertEqual(my_class.width, 4)
+
+    def test_dictionary(self):
+        """Checks dictionary representation."""
+        my_class = Rectangle(10, 2, 1, 9)
+        expected = {'x': 1, 'height': 2, 'width': 10, 'y': 9, 'id': 1}
+        self.assertEqual(my_class.to_dictionary(), expected)
