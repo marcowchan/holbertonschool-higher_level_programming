@@ -236,3 +236,40 @@ class SquareTest(unittest.TestCase):
             my_class.display()
         output = f.getvalue()
         self.assertEqual(output, expected)
+
+    def test_update_args(self):
+        """Checks update with args."""
+        my_class = Square(2, 1, 1, 6)
+        my_class.update(12)
+        self.assertEqual(my_class.id, 12)
+        my_class.update(12, 12)
+        self.assertEqual(my_class.width, 12)
+        self.assertEqual(my_class.height, 12)
+        self.assertEqual(my_class.size, 12)
+        my_class.update(12, 12, 11)
+        self.assertEqual(my_class.x, 11)
+        my_class.update(12, 12, 11, 11)
+        self.assertEqual(my_class.y, 11)
+
+
+    def test_update_kwargs(self):
+        """Checks update with kwargs."""
+        my_class = Square(10, 10, 10, 10)
+        my_class.update(size=1)
+        self.assertEqual(my_class.size, 1)
+
+        my_class.update(size=3, x=2)
+        self.assertEqual(my_class.width, 3)
+        self.assertEqual(my_class.x, 2)
+
+        my_class.update(y=1, size=2, x=3, id=89)
+        self.assertEqual(my_class.y, 1)
+        self.assertEqual(my_class.width, 2)
+        self.assertEqual(my_class.x, 3)
+        self.assertEqual(my_class.id, 89)
+
+        my_class.update(x=1, size=2, y=3)
+        self.assertEqual(my_class.x, 1)
+        self.assertEqual(my_class.height, 2)
+        self.assertEqual(my_class.y, 3)
+        self.assertEqual(my_class.width, 2)
