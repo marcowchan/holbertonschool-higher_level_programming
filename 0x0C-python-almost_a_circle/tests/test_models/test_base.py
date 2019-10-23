@@ -8,6 +8,7 @@ class BaseTest(unittest.TestCase):
     """Tests for the Base class."""
     def setUp(self):
         """Initializes the __nb_objects attribute before each test."""
+        self.assertIs(hasattr(Base, "_Base__nb_objects"), True)
         Base._Base__nb_objects = 0
 
     def test_id_type(self):
