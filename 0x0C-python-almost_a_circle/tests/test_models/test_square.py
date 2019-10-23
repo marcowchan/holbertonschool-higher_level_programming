@@ -50,14 +50,19 @@ class SquareTest(unittest.TestCase):
         self.assertEqual(my_class.id, -7)
 
     def test_gets_width(self):
-        """Checks getter for size."""
+        """Checks getter for width."""
         my_class = Square(71)
         self.assertEqual(my_class.width, 71)
 
     def test_gets_height(self):
         """Checks getter for height."""
-        my_class = Square(71)
-        self.assertEqual(my_class.height, 71)
+        my_class = Square(12)
+        self.assertEqual(my_class.height, 12)
+
+    def test_gets_size(self):
+        """Checks getter for size."""
+        my_class = Square(31)
+        self.assertEqual(my_class.size, 31)
 
     def test_gets_x(self):
         """Checks getter for x."""
