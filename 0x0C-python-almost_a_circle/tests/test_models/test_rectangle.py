@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Unittest for the Rectangle class."""
+from io import StringIO
+from contextlib import redirect_stdout
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -8,7 +10,7 @@ from models.rectangle import Rectangle
 class RectangleTest(unittest.TestCase):
     """Tests for the Rectangle class."""
     def setUp(self):
-        """Initializes the __nb_objects attribute before each test."""
+        """Initializes __nb_objects."""
         Base._Base__nb_objects = 0
 
     def test_id_type(self):
@@ -219,22 +221,31 @@ class RectangleTest(unittest.TestCase):
             17, 13, 12, {"y": 16}
         )
 
-        def test_x_value(self):
-            self.assertRaisesRegex(
-                ValueError,
-                "x must be > 0",
-                Rectangle,
-                17, 13, -12
-            )
+    def test_x_value(self):
+        self.assertRaisesRegex(
+            ValueError,
+            "x must be >= 0",
+            Rectangle,
+            17, 13, -12
+        )
 
-        def test_y_value(self):
-            self.assertRaisesRegex(
-                ValueError,
-                "y must be > 0",
-                Rectangle,
-                17, 13, 12, -16
-            )
+    def test_y_value(self):
+        self.assertRaisesRegex(
+            ValueError,
+            "y must be >= 0",
+            Rectangle,
+            17, 13, 12, -16
+        )
 
-        def test_area(self):
-            my_class = Rectangle(6, 5, 2, 16, 1)
-            self.assertEqual(my_class.area(), 30)
+    def test_area(self):
+        my_class = Rectangle(6, 5, 2, 16, 1)
+        self.assertEqual(my_class.area(), 30)
+
+    def test_display(self):
+        my_class = Rectangle(3, 4)
+        expected = "###\n###\n###\n###\n"
+        f = StringIO()
+        with redirect_stdout(f):
+            my_class.display()
+        output = f.getvalue()
+        self.assertEqual(output, expected)
