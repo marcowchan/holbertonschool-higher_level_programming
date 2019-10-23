@@ -234,3 +234,7 @@ class RectangleTest(unittest.TestCase):
                 Rectangle,
                 17, 13, 12, -16
             )
+
+        def test_area(self):
+            my_class = Rectangle(6, 5, 2, 16, 1)
+            self.assertEqual(my_class.area(), 30)
