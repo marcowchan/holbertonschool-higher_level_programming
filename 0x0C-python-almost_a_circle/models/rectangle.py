@@ -79,6 +79,13 @@ class Rectangle(Base):
         print("\n".join([" " * self.x + "#" * self.width] * self.height))
 
     def __str__(self):
+        """Gets the string representation of the Rectangle."""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.x, self.y, self.width, self.height
         )
+
+    def update(self, *args):
+        """Updates the attributes."""
+        attrs = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, attrs[i], args[i])
