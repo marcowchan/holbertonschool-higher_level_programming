@@ -19,8 +19,9 @@ class Base:
         else:
             self.id = id
 
+     @staticmethod
     def to_json_string(list_dictionaries):
         """Gets the json representation of a list of dictionaries."""
-        if not list_dictionaries or list_dictionaries is None:
+        if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
