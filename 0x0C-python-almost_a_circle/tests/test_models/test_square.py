@@ -273,3 +273,9 @@ class SquareTest(unittest.TestCase):
         self.assertEqual(my_class.height, 2)
         self.assertEqual(my_class.y, 3)
         self.assertEqual(my_class.width, 2)
+
+    def test_dictionary(self):
+        """Checks dictionary representation."""
+        my_class = Square(10, 1, 9)
+        expected = {'x': 1, 'size': 10, 'y': 9, 'id': 1}
+        self.assertEqual(my_class.to_dictionary(), expected)
