@@ -253,3 +253,12 @@ class RectangleTest(unittest.TestCase):
     def test_str(self):
         my_class = Rectangle(3, 4, 1, 2, 6)
         self.assertEqual(my_class.__str__(), "[Rectangle] (6) 1/2 - 3/4")
+
+    def test_display_position(self):
+        my_class = Rectangle(2, 3, 2, 2)
+        expected = "\n\n  ##\n  ##\n  ##\n"
+        f = StringIO()
+        with redirect_stdout(f):
+            my_class.display()
+        output = f.getvalue()
+        self.assertEqual(output, expected)
