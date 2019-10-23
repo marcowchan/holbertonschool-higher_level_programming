@@ -15,10 +15,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Gets the width attribute."""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Validates and sets the width attribute."""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -27,10 +29,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Gets the height attribute."""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Validates and sets the height attribute."""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -39,10 +43,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Gets the x attribute."""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Validates and sets the x attribute."""
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -51,10 +57,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Gets the y attribute."""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Validates and sets the y attribute."""
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -62,7 +70,9 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Computes the area of the Rectangle."""
         return self.width * self.height
 
     def display(self):
+        """Prints a rectangle of '#'."""
         print("\n".join(["#" * self.width] * self.height))
