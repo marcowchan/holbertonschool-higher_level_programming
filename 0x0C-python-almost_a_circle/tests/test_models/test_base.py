@@ -53,3 +53,15 @@ class BaseTest(unittest.TestCase):
         input = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
         expected = json.dumps(input)
         self.assertEqual(Base.to_json_string(input), expected)
+
+    def test_to_json_empty(self):
+        """Checks the json represntation with an empty list."""
+        input = []
+        expected = "[]"
+        self.assertEqual(Base.to_json_string(input), expected)
+
+    def test_to_json_none(self):
+        """Checks the json represntation with None."""
+        input = None
+        expected = "[]"
+        self.assertEqual(Base.to_json_string(input), expected)
