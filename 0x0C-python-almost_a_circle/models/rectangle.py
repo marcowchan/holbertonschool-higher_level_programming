@@ -91,6 +91,6 @@ class Rectangle(Base):
             for i in range(len(args)):
                 setattr(self, attrs[i], args[i])
             return
-        for k in attrs:
-            if k in kwargs:
-                setattr(self, k, kwargs[k])
+        for k, v in kwargs.items():
+            if hasattr(self, k):
+                setattr(self, k, v)
