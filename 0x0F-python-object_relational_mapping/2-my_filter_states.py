@@ -14,7 +14,7 @@ def main():
         "db": sys.argv[3],
         "charset": "utf8"
     }
-    query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id"
+    query = "SELECT * FROM states WHERE BINARY name = `{}` ORDER BY id"
     conn = MySQLdb.connect(**options)
     cur = conn.cursor()
     cur.execute(query.format(sys.argv[4]))
