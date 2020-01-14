@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Sends a request and displays the response.
+"""Sends a request and displays the response."""
 from urllib import request
 with request.urlopen("https://intranet.hbtn.io/status") as response:
     html = response.read()
