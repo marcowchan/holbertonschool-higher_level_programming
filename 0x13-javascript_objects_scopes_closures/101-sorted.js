@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const dict = require('./main').dict;
+const dict = require('./101-data').dict;
 const inverted = {};
 for (const key in dict) {
   if (inverted[dict[key]] === undefined) {
