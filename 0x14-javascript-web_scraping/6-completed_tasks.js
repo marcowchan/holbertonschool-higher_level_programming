@@ -3,7 +3,7 @@ const request = require('request');
 const count = {};
 request(process.argv[2], { json: true }, (err, response, body) => {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
   body.forEach(({ userId, completed }) => {
     count[userId] = count[userId] || 0;
