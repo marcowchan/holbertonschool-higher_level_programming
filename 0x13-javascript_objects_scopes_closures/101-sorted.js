@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const dict = require('./101-data').dict;
-let inverted = {};
-for (key in dict) {
+const dict = require('./main').dict;
+const inverted = {};
+for (const key in dict) {
   if (inverted[dict[key]] === undefined) {
     inverted[dict[key]] = [];
   }
